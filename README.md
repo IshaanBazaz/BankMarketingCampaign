@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+The main reason for obtaining these analysis to target people who has a higher chance of becoming a potential customer based on their information obtained. This will help the marketing team to better target their potential clients
 
-You can use the [editor on GitHub](https://github.com/IshaanBazaz/BankMarketingCampaign/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+In this task we learned about data normalisation, one hot encoding to convert categorical data into numeric attributes and applying classification and clustering algorithms. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## The Data attribute distribution.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+We downloaded the data and uploaded it as a spark dataframe. Then we applied printSchema() on it and leaned that the data has 17 attributes. The label attribute was deposit and it was well balanced. However, the data was uncleaned and we had to clean it. Along with that we also dropped few of the unnecessary attributes, which can be derived from other attributes.
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+## The methods/algorithms you used for data wrangling and processing.
 
-- Bulleted
-- List
+For data wrangling we used one hot encoding vector. This converts categorical data into numeric attributes and then using aggressor we combined them into a single feature. Then we normalized this feature attribute using Min Max Scaling technique. For applying further clustering and classification algorithm we used this scaled feature attribute.
 
-1. Numbered
-2. List
+## The performance of both unsupervised and supervised learning on the data.
 
-**Bold** and _Italic_ and `Code` text
+For unsupervised learning of data we used clustering, and in that we used K-Means algorithm with k = 2. To measure the performance of this algorithm we used silhouette measure. The value of this was 0.92, which indicates the cluster was well divided from each other.
 
-[Link](url) and ![Image](src)
-```
+For supervised learning of data, we used classification algorithms, namely Logistic Regression, Decision Tree and Naïve Bayes. For measuring their performance we used accuracy metric.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Accuracy of Logistic regression was 75%.
+Accuracy of Decision Tree was 77%.
+Accuracy of Naïve Bayes was 74%.
 
-### Jekyll Themes
+Hence, Decision Tree was best.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/IshaanBazaz/BankMarketingCampaign/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## The important features which affect the objective (‘yes’ in ‘deposit’).
 
-### Support or Contact
+The import features which affect the objective are 'age', 'job', 'marital', 'education', 'default', 'balance', 'housing', 'loan', 'campaign', 'pdays', 'previous', 'poutcome'.
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
