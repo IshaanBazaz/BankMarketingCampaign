@@ -2,6 +2,8 @@ The main reason for obtaining these analysis to target people who has a higher c
 
 In this task we learned about data normalisation, one hot encoding to convert categorical data into numeric attributes and applying classification and clustering algorithms. 
 
+The code and other resources can be found when you view this project on GitHub.
+
 
 ## The Data attribute distribution.
 
